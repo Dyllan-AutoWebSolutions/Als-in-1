@@ -1,1015 +1,330 @@
 <!doctype html>
 <html lang="af">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Als-in-1 Tuindienste | Worcester</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      :root {
-        --bark: #6b4423;
-        --bark-dark: #4a2f18;
-        --orange: #e8a33d;
-        --green: #5c9a3d;
-        --green-deep: #3e6e2a;
-        --yellow: #f2d03a;
-        --cream: #f7f2e7;
-        --cream-dark: #ede4d0;
-        --ink: #2b2117;
-        --font-display: "Fraunces", serif;
-        --font-body: "Karla", sans-serif;
-      }
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-      html {
-        scroll-behavior: smooth;
-      }
-      body {
-        font-family: var(--font-body);
-        background: var(--cream);
-        color: var(--ink);
-        line-height: 1.5;
-        -webkit-font-smoothing: antialiased;
-      }
-      img {
-        max-width: 100%;
-        display: block;
-      }
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-      .container {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
-
-      /* ===== Header ===== */
-      header {
-        position: sticky;
-        top: 0;
-        z-index: 50;
-        background: var(--cream);
-        border-bottom: 2px solid var(--bark);
-      }
-      .nav-wrap {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 12px 20px;
-      }
-      .logo-mark {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        font-family: var(--font-display);
-        font-weight: 700;
-        font-size: 1.05rem;
-        color: var(--bark-dark);
-      }
-      .logo-mark img {
-        height: 40px;
-        width: auto;
-      }
-      .menu-btn {
-        background: none;
-        border: 2px solid var(--bark);
-        border-radius: 8px;
-        width: 42px;
-        height: 42px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-      }
-      .menu-btn span,
-      .menu-btn::before,
-      .menu-btn::after {
-        content: "";
-        display: block;
-        width: 18px;
-        height: 2px;
-        background: var(--bark);
-        position: relative;
-      }
-      .menu-btn {
-        flex-direction: column;
-        gap: 4px;
-      }
-      nav.mobile-nav {
-        display: none;
-        flex-direction: column;
-        background: var(--cream-dark);
-        border-bottom: 2px solid var(--bark);
-      }
-      nav.mobile-nav.open {
-        display: flex;
-      }
-      nav.mobile-nav a {
-        padding: 14px 20px;
-        border-top: 1px solid rgba(107, 68, 35, 0.15);
-        font-weight: 600;
-        color: var(--bark-dark);
-      }
-      .nav-cta {
-        display: none;
-      }
-
-      @media (min-width: 860px) {
-        .menu-btn {
-          display: none;
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Als-in-1 Tuindienste | Tuindienste in Worcester en plase</title>
+<meta name="description" content="Gras sny, beddings, rante en gifbeheer vir woonhuise in Worcester en plase in die vallei. Tuinvullis altyd ingesluit. Gratis kwotasie.">
+<link rel="canonical" href="https://[DOMEIN]/">
+<meta name="theme-color" content="#f7f4eb">
+<link rel="preload" href="/fonts/josefin-sans-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/nunito-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/tokens.css?v=5">
+<link rel="stylesheet" href="/css/main.css?v=5">
+<script src="/js/main.js?v=5"></script>
+<link rel="icon" href="/assets/logo/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/logo/icon-512.png" sizes="512x512" type="image/png">
+<link rel="apple-touch-icon" href="/assets/logo/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="af_ZA">
+<meta property="og:site_name" content="Als-in-1 Tuindienste">
+<meta property="og:title" content="Als-in-1 Tuindienste | Tuindienste in Worcester en plase">
+<meta property="og:description" content="Gras sny, beddings, rante en gifbeheer vir woonhuise in Worcester en plase in die vallei. Tuinvullis altyd ingesluit. Gratis kwotasie.">
+<meta property="og:url" content="https://[DOMEIN]/">
+<meta property="og:image" content="https://[DOMEIN]/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Groot, netjiese grasperk met beboste berge agter">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Als-in-1 Tuindienste | Tuindienste in Worcester en plase">
+<meta name="twitter:description" content="Gras sny, beddings, rante en gifbeheer vir woonhuise in Worcester en plase in die vallei. Tuinvullis altyd ingesluit. Gratis kwotasie.">
+<meta name="twitter:image" content="https://[DOMEIN]/images/og-image.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Als-in-1 Tuindienste",
+  "slogan": "Flink · Netjies · Betroubaar",
+  "url": "https://[DOMEIN]/",
+  "telephone": "+27000000000",
+  "image": "https://[DOMEIN]/images/og-image.jpg",
+  "logo": "https://[DOMEIN]/assets/logo/icon-512.png",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Worcester",
+    "addressRegion": "Wes-Kaap",
+    "addressCountry": "ZA"
+  },
+  "areaServed": [
+    {
+      "@type": "Place",
+      "name": "Worcester-Sentraal"
+    },
+    {
+      "@type": "Place",
+      "name": "Brandwacht"
+    },
+    {
+      "@type": "Place",
+      "name": "Worcester-Wes"
+    },
+    {
+      "@type": "Place",
+      "name": "De Wet"
+    },
+    {
+      "@type": "Place",
+      "name": "Nonna"
+    },
+    {
+      "@type": "Place",
+      "name": "Aan de Doorns"
+    },
+    {
+      "@type": "Place",
+      "name": "Overhex"
+    }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Tuindienste",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Gras sny"
         }
-        nav.mobile-nav {
-          display: flex !important;
-          flex-direction: row;
-          background: none;
-          border: none;
-          gap: 4px;
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Beddings"
         }
-        nav.mobile-nav a {
-          border-top: none;
-          padding: 8px 14px;
-          border-radius: 20px;
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Rante"
         }
-        nav.mobile-nav a:hover {
-          background: var(--cream-dark);
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Gifbeheer"
         }
-        .nav-cta {
-          display: inline-block;
-          background: var(--green-deep);
-          color: #fff;
-          padding: 10px 22px;
-          border-radius: 30px;
-          font-weight: 700;
-          font-size: 0.9rem;
-          white-space: nowrap;
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Tuinvullis-verwydering"
         }
       }
+    ]
+  }
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#inhoud">Slaan oor na die inhoud</a>
 
-      /* ===== Hero ===== */
-      .hero {
-        position: relative;
-        padding: 48px 0 70px;
-        background:
-          radial-gradient(
-            circle at 85% -10%,
-            rgba(242, 208, 58, 0.35),
-            transparent 45%
-          ),
-          radial-gradient(
-            circle at 5% 110%,
-            rgba(92, 154, 61, 0.25),
-            transparent 50%
-          ),
-          var(--cream);
-        overflow: hidden;
-      }
-      .hero-eyebrow {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        background: var(--cream-dark);
-        border: 1px solid var(--bark);
-        color: var(--bark-dark);
-        font-size: 0.78rem;
-        font-weight: 700;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
-        padding: 6px 14px;
-        border-radius: 30px;
-        margin-bottom: 22px;
-      }
-      .hero-eyebrow .dot {
-        width: 7px;
-        height: 7px;
-        border-radius: 50%;
-        background: var(--green);
-      }
-      .hero h1 {
-        font-family: var(--font-display);
-        font-weight: 600;
-        font-size: 2.5rem;
-        line-height: 1.08;
-        color: var(--bark-dark);
-        letter-spacing: -0.01em;
-      }
-      .hero h1 .accent {
-        color: var(--green-deep);
-        font-style: italic;
-        font-weight: 600;
-      }
-      .hero p.lead {
-        margin-top: 18px;
-        font-size: 1.05rem;
-        max-width: 46ch;
-        color: #4a3b2a;
-      }
-      .hero-ctas {
-        margin-top: 28px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-      }
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        font-weight: 700;
-        font-size: 0.95rem;
-        padding: 14px 26px;
-        border-radius: 8px;
-        border: 2px solid transparent;
-        cursor: pointer;
-        transition:
-          transform 0.15s ease,
-          box-shadow 0.15s ease;
-      }
-      .btn:active {
-        transform: scale(0.97);
-      }
-      .btn-primary {
-        background: var(--green-deep);
-        color: #fff;
-        box-shadow: 0 6px 0 var(--bark-dark);
-      }
-      .btn-primary:hover {
-        box-shadow: 0 4px 0 var(--bark-dark);
-        transform: translateY(2px);
-      }
-      .btn-secondary {
-        background: transparent;
-        border-color: var(--bark);
-        color: var(--bark-dark);
-      }
-      .btn-secondary:hover {
-        background: var(--cream-dark);
-      }
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="site-header__logo" href="/"><img src="/assets/logo/als-in-1-logo-280.webp" srcset="/assets/logo/als-in-1-logo-280.webp 280w, /assets/logo/als-in-1-logo-420.webp 420w" sizes="140px" width="140" height="121" alt="Als-in-1 Tuindienste"></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="hoofmenu">
+      <svg class="icon-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg><svg class="icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12"/><path d="M18 6L6 18"/></svg><span class="nav-toggle__label">Menu</span>
+    </button>
+    <nav class="site-nav" id="hoofmenu" aria-label="Hoofmenu">
+      <ul class="site-nav__list">
+        <li><a class="site-nav__link" href="/" aria-current="page">Tuis</a></li>
+        <li><a class="site-nav__link" href="/woonhuise/">Woonhuise</a></li>
+        <li><a class="site-nav__link" href="/plase/">Plase</a></li>
+        <li><a class="site-nav__link" href="/kontak/">Kontak</a></li>
+        <li><a class="btn btn--whatsapp btn--sm" href="https://wa.me/27000000000?text=Hallo%2C%20ek%20wil%20graag%20%27n%20kwotasie%20kry."><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.4L3 21l2.1-5.6A8.4 8.4 0 1 1 21 11.5z"/></svg>WhatsApp</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-      .hero-stats {
-        margin-top: 42px;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 14px;
-        border-top: 1px dashed var(--bark);
-        padding-top: 22px;
-      }
-      .hero-stats div {
-        text-align: left;
-      }
-      .hero-stats .num {
-        font-family: var(--font-display);
-        font-size: 1.6rem;
-        font-weight: 700;
-        color: var(--green-deep);
-        display: block;
-      }
-      .hero-stats .label {
-        font-size: 0.78rem;
-        color: #5b4a36;
-      }
+<main id="inhoud">
 
-      .hero-leaf {
-        position: absolute;
-        pointer-events: none;
-      }
+<section class="container hero" aria-labelledby="hero-titel">
+  <div class="hero__text">
+    <p class="eyebrow">Tuindienste · Worcester &amp; omliggende plase</p>
+    <h1 class="display" id="hero-titel">Ons sny, kant af en spuit — en vat al die vullis saam.</h1>
+    <p class="lead">Als-in-1 Tuindienste versorg woonhuise in Worcester en plase in die vallei. Gras, beddings, rante en onkruidbeheer, gedoen deur een betroubare span.</p>
+    <p class="route-prompt" id="route-vraag">Waarvoor soek jy hulp?</p>
+    <div class="route-cards" role="group" aria-labelledby="route-vraag">
+      <a class="route-card route-card--house" href="/woonhuise/">
+        <span class="route-card__title">Vir my huis <span class="route-card__arrow" aria-hidden="true">→</span></span>
+        <span class="route-card__areas"><span class="nowrap">Worcester-Sentraal</span> · <span class="nowrap">Brandwacht</span> · <span class="nowrap">Worcester-Wes</span></span>
+      </a>
+      <a class="route-card route-card--farm" href="/plase/">
+        <span class="route-card__title">Vir my plaas <span class="route-card__arrow" aria-hidden="true">→</span></span>
+        <span class="route-card__areas"><span class="nowrap">De Wet</span> · <span class="nowrap">Nonna</span> · <span class="nowrap">Aan de Doorns</span> · <span class="nowrap">Overhex</span></span>
+      </a>
+    </div>
+    <p class="small muted">Gratis kwotasie · <a href="https://wa.me/27000000000?text=Hallo%2C%20ek%20wil%20graag%20%27n%20kwotasie%20kry.">WhatsApp ons by [WHATSAPP-NOMMER]</a></p>
+  </div>
+  <div class="hero__media">
+    <div class="disc disc--sun hero__disc hero__disc--tr" aria-hidden="true"></div>
+    <div class="disc disc--leaf hero__disc hero__disc--bl" aria-hidden="true"></div>
+    <img src="/images/tuis-held.webp" srcset="/images/tuis-held-800.webp 800w, /images/tuis-held.webp 1200w" sizes="(orientation: landscape) and (max-height: 500px) 36vw, (min-width: 1024px) 560px, 100vw" width="1200" height="1500" fetchpriority="high" alt="Kaaps-Hollandse opstal met 'n gevee grondpaadjie tussen netjiese grasperke">
+  </div>
+</section>
 
-      @media (min-width: 760px) {
-        .hero {
-          padding: 70px 0 90px;
-        }
-        .hero-inner {
-          display: grid;
-          grid-template-columns: 1.1fr 0.9fr;
-          gap: 40px;
-          align-items: center;
-        }
-        .hero h1 {
-          font-size: 3.4rem;
-        }
-        .hero-art {
-          aspect-ratio: 4/5;
-          border-radius: 18px;
-          background: linear-gradient(
-            160deg,
-            var(--green) 0%,
-            var(--green-deep) 100%
-          );
-          position: relative;
-          overflow: hidden;
-        }
-      }
-      .hero-art {
-        margin-top: 36px;
-        border-radius: 16px;
-        background: linear-gradient(
-          160deg,
-          var(--green) 0%,
-          var(--green-deep) 100%
-        );
-        aspect-ratio: 16/10;
-        position: relative;
-        overflow: hidden;
-        display: flex;
-        align-items: flex-end;
-        padding: 18px;
-      }
-      .hero-art .badge {
-        background: var(--yellow);
-        color: var(--bark-dark);
-        font-weight: 700;
-        font-size: 0.85rem;
-        padding: 10px 16px;
-        border-radius: 10px;
-        box-shadow: 0 4px 0 rgba(0, 0, 0, 0.15);
-      }
-      .hero-art svg {
-        position: absolute;
-        opacity: 0.18;
-        top: -10%;
-        right: -10%;
-        width: 70%;
-        height: auto;
-      }
+<section class="section section--paper" aria-labelledby="dienste-titel">
+  <div class="container section__inner">
+    <div class="section-head">
+      <p class="eyebrow">Wat ons doen</p>
+      <h2 id="dienste-titel">Vyf dienste. Een span. Geen gemors agtergelaat nie.</h2>
+    </div>
+    <div class="grid grid--tiles">
+      <div class="tile"><svg class="icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 20h18"/><path d="M6 20c0-5 1-8 2-10"/><path d="M10 20c0-6 1-10 2-13"/><path d="M14 20c0-5 1-8 3-10"/><path d="M18 20c0-3 .5-5 1.5-6"/></svg><h3>Gras sny</h3><p>Gelyk gesny en die kante skerp afgewerk.</p></div>
+      <div class="tile"><svg class="icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="7" r="3"/><path d="M12 10v10"/><path d="M12 16c-3 0-5-2-5-4"/><path d="M12 15c3 0 5-2 5-4"/><path d="M4 20h16"/></svg><h3>Beddings</h3><p>Onkruid uit, beddings skoon en in vorm.</p></div>
+      <div class="tile"><svg class="icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 20l7-10 4 5 3-3 6 8z"/><path d="M6 20v-2"/><path d="M17 20v-3"/></svg><h3>Rante</h3><p>Rante en walle skoongemaak en onder beheer.</p></div>
+      <div class="tile"><svg class="icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 9h7v11H7z"/><path d="M9 9V5h4"/><path d="M13 5h3"/><path d="M19 3v.01"/><path d="M20 6v.01"/><path d="M19 9v.01"/></svg><h3>Gifbeheer</h3><p>Onkruid op paadjies, opritte en rante gespuit.</p></div>
+      <div class="tile tile--sun"><svg class="icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 6h12v10H2z"/><path d="M14 9h4l3 3v4h-7"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg><h3>Tuinvullis weg</h3><p><strong>Ingesluit.</strong> Alles wat ons sny, vat ons saam.</p></div>
+    </div>
+  </div>
+</section>
 
-      /* ===== Section heading pattern ===== */
-      .section-head {
-        text-align: center;
-        margin-bottom: 36px;
-      }
-      .section-head .kicker {
-        font-size: 0.78rem;
-        font-weight: 700;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        color: var(--green-deep);
-      }
-      .section-head h2 {
-        font-family: var(--font-display);
-        font-weight: 600;
-        font-size: 1.9rem;
-        color: var(--bark-dark);
-        margin-top: 8px;
-      }
-      .section-head .dots {
-        margin-top: 10px;
-        color: var(--orange);
-        letter-spacing: 4px;
-        font-size: 0.9rem;
-      }
-      .section-head p {
-        margin-top: 10px;
-        color: #5b4a36;
-        max-width: 50ch;
-        margin-left: auto;
-        margin-right: auto;
-        font-size: 0.95rem;
-      }
-
-      /* ===== Services ===== */
-      .services {
-        background: var(--bark-dark);
-        padding: 64px 0;
-        color: #fff;
-      }
-      .services .section-head h2 {
-        color: #fff;
-      }
-      .services .section-head p {
-        color: #d9c9b3;
-      }
-      .service-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 16px;
-      }
-      @media (min-width: 640px) {
-        .service-grid {
-          grid-template-columns: 1fr 1fr;
-        }
-      }
-      @media (min-width: 980px) {
-        .service-grid {
-          grid-template-columns: repeat(3, 1fr);
-        }
-      }
-      .service-card {
-        background: #3a2a18;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 14px;
-        padding: 24px;
-        position: relative;
-        overflow: hidden;
-      }
-      .service-card::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 4px;
-        background: var(--green);
-      }
-      .service-card .icon {
-        width: 44px;
-        height: 44px;
-        border-radius: 10px;
-        background: var(--green-deep);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 16px;
-        font-size: 1.3rem;
-      }
-      .service-card h3 {
-        font-family: var(--font-display);
-        font-weight: 600;
-        font-size: 1.15rem;
-        margin-bottom: 8px;
-      }
-      .service-card p {
-        font-size: 0.88rem;
-        color: #cdbda5;
-      }
-
-      /* ===== Why choose us ===== */
-      .why {
-        padding: 64px 0;
-      }
-      .why-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 32px;
-      }
-      @media (min-width: 860px) {
-        .why-grid {
-          grid-template-columns: 1fr 1.2fr;
-          align-items: center;
-        }
-      }
-      .why-copy .kicker {
-        font-size: 0.78rem;
-        font-weight: 700;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: var(--green-deep);
-      }
-      .why-copy h2 {
-        font-family: var(--font-display);
-        font-weight: 600;
-        font-size: 2rem;
-        color: var(--bark-dark);
-        margin-top: 8px;
-        line-height: 1.15;
-      }
-      .why-copy p {
-        margin-top: 14px;
-        color: black;
-        font-size: 0.97rem;
-      }
-      .why-visual {
-        background: var(--cream-dark);
-        border: 2px dashed var(--bark);
-        border-radius: 16px;
-        aspect-ratio: 4/3;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--bark);
-        font-family: var(--font-display);
-        font-size: 1.1rem;
-        text-align: center;
-        padding: 20px;
-      }
-      .reasons {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 14px;
-        margin-top: 28px;
-      }
-      .reason-card {
-        background: var(--green-deep);
-        color: #fff;
-        border-radius: 12px;
-        padding: 18px;
-      }
-      .reason-card:nth-child(2) {
-        background: var(--bark);
-      }
-      .reason-card:nth-child(3) {
-        background: var(--bark);
-      }
-      .reason-card:nth-child(4) {
-        background: var(--green-deep);
-      }
-      .reason-card .icon {
-        font-size: 1.4rem;
-        margin-bottom: 8px;
-        display: block;
-      }
-      .reason-card h4 {
-        font-family: var(--font-display);
-        font-size: 1rem;
-        margin-bottom: 6px;
-      }
-      .reason-card p {
-        font-size: 0.8rem;
-        opacity: 0.9;
-      }
-
-      /* ===== Gallery ===== */
-      .gallery {
-        background: var(--cream-dark);
-        padding: 64px 0;
-      }
-      .gallery-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-      }
-      @media (min-width: 700px) {
-        .gallery-grid {
-          grid-template-columns: repeat(4, 1fr);
-        }
-      }
-      .gallery-item {
-        aspect-ratio: 1/1;
-        border-radius: 12px;
-        background: linear-gradient(
-          150deg,
-          var(--green) 0%,
-          var(--green-deep) 100%
-        );
-        position: relative;
-        overflow: hidden;
-        display: flex;
-        align-items: flex-end;
-        padding: 10px;
-      }
-      .gallery-item:nth-child(2n) {
-        background: linear-gradient(150deg, var(--orange) 0%, var(--bark) 100%);
-      }
-      .gallery-item:nth-child(3n) {
-        background: linear-gradient(
-          150deg,
-          var(--yellow) 0%,
-          var(--green-deep) 100%
-        );
-      }
-      .gallery-item span {
-        background: rgba(0, 0, 0, 0.45);
-        color: #fff;
-        font-size: 0.72rem;
-        font-weight: 600;
-        padding: 5px 10px;
-        border-radius: 20px;
-      }
-
-      /* ===== Testimonial ===== */
-      .testimonial {
-        padding: 60px 0;
-        text-align: center;
-      }
-      .testimonial blockquote {
-        font-family: var(--font-display);
-        font-size: 1.4rem;
-        font-style: italic;
-        color: var(--bark-dark);
-        max-width: 42ch;
-        margin: 0 auto;
-        line-height: 1.4;
-      }
-      .testimonial cite {
-        display: block;
-        margin-top: 16px;
-        font-style: normal;
-        font-weight: 700;
-        color: var(--green-deep);
-        font-size: 0.9rem;
-      }
-
-      /* ===== Contact / CTA ===== */
-      .contact {
-        background: var(--green-deep);
-        color: #fff;
-        padding: 60px 0;
-        border-radius: 0;
-      }
-      .contact-inner {
-        text-align: center;
-      }
-      .contact h2 {
-        font-family: var(--font-display);
-        font-weight: 600;
-        font-size: 2rem;
-      }
-      .contact p {
-        margin-top: 12px;
-        color: #dcefd0;
-        max-width: 46ch;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      .contact-form {
-        margin-top: 30px;
-        max-width: 480px;
-        margin-left: auto;
-        margin-right: auto;
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        text-align: left;
-      }
-      .contact-form label {
-        font-size: 0.8rem;
-        font-weight: 700;
-        margin-bottom: 4px;
-        display: block;
-      }
-      .contact-form input,
-      .contact-form textarea {
-        width: 100%;
-        padding: 12px 14px;
-        border-radius: 8px;
-        border: none;
-        font-family: var(--font-body);
-        font-size: 0.95rem;
-        background: #fff;
-        color: var(--ink);
-      }
-      .contact-form textarea {
-        resize: vertical;
-        min-height: 90px;
-      }
-      .contact-form .btn-primary {
-        background: var(--yellow);
-        color: var(--bark-dark);
-        box-shadow: 0 6px 0 var(--bark-dark);
-        justify-content: center;
-        margin-top: 6px;
-      }
-      .contact-direct {
-        margin-top: 28px;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
-        font-size: 0.92rem;
-      }
-      .contact-direct a {
-        text-decoration: underline;
-        text-underline-offset: 3px;
-      }
-      .form-msg {
-        font-size: 0.85rem;
-        margin-top: 10px;
-        min-height: 1.2em;
-        color: var(--yellow);
-        font-weight: 700;
-      }
-
-      /* ===== Footer ===== */
-      footer {
-        background: var(--bark-dark);
-        color: #cdbda5;
-        padding: 36px 0 24px;
-        text-align: center;
-        font-size: 0.82rem;
-      }
-      footer .footer-logo {
-        font-family: var(--font-display);
-        color: #fff;
-        font-size: 1.1rem;
-        font-weight: 700;
-        margin-bottom: 8px;
-      }
-      footer .tagline {
-        color: var(--yellow);
-        font-weight: 600;
-        letter-spacing: 0.06em;
-        margin-bottom: 18px;
-        font-size: 0.75rem;
-        text-transform: uppercase;
-      }
-
-      /* Whatsapp floating button */
-      .wa-float {
-        position: fixed;
-        bottom: 18px;
-        right: 18px;
-        background: var(--green);
-        color: #fff;
-        width: 54px;
-        height: 54px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
-        z-index: 60;
-        font-size: 1.5rem;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <div class="nav-wrap">
-        <div class="logo-mark">
-          <img src="Als in 1 Logo.png" alt="Als-in-1 Tuindienste logo" />
+<section class="section section--sand" aria-labelledby="huis-plaas-titel">
+  <div class="container section__inner">
+    <div class="section-head">
+      <p class="eyebrow">Huis of plaas</p>
+      <h2 id="huis-plaas-titel">Ons werk in die dorp en op die plaas.</h2>
+    </div>
+    <div class="grid grid--rows">
+      <article class="card">
+        <img class="card__media" src="/images/tuis-woonhuis.webp" width="1280" height="720" loading="lazy" alt="Wit huis met 'n groen grasperk en 'n netjies afgekante bedding met struike">
+        <div class="card__body">
+          <h3>Woonhuise</h3>
+          <p>Eenmalige skoonmaak of 'n vaste dag elke week of maand. Jy hoef nie eers tuis te wees nie.</p>
+          <div class="chip-row"><span class="chip chip--leaf">Worcester-Sentraal</span><span class="chip chip--leaf">Brandwacht</span><span class="chip chip--leaf">Worcester-Wes</span></div>
+          <div class="card__action"><a class="btn btn--primary" href="/woonhuise/">Dienste vir woonhuise</a></div>
         </div>
-        <button
-          class="nav-cta"
-          onclick="document.getElementById('kontak').scrollIntoView()"
-        >
-          Kry 'n Kwotasie
-        </button>
-        <button class="menu-btn" id="menuBtn" aria-label="Wys kieslys"></button>
+      </article>
+      <article class="card">
+        <img class="card__media" src="/images/tuis-plaas.webp" width="1280" height="720" loading="lazy" alt="Kort gesnyde grasgang tussen wingerdrye met beboste heuwels agter">
+        <div class="card__body">
+          <h3>Plase</h3>
+          <p>Rante, paaie, werf en werkershuise op 'n vaste skedule, beplan rondom jou seisoen.</p>
+          <div class="chip-row"><span class="chip chip--ochre">De Wet</span><span class="chip chip--ochre">Nonna</span><span class="chip chip--ochre">Aan de Doorns</span><span class="chip chip--ochre">Overhex</span></div>
+          <div class="card__action"><a class="btn btn--primary" href="/plase/">Dienste vir plase</a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="hoekom-titel">
+  <div class="container section__inner">
+    <div class="section-head">
+      <p class="eyebrow">Hoekom Als-in-1</p>
+      <h2 id="hoekom-titel">Flink. Netjies. Betroubaar.</h2>
+    </div>
+    <div class="grid grid--thirds grid--why">
+      <div class="why"><div class="disc disc--ochre" aria-hidden="true"></div><h3>Flink</h3><p>Kwotasie binne [24] uur. Ons kom op die dag wat ons sê en maak klaar in een besoek.</p></div>
+      <div class="why"><div class="disc disc--leaf" aria-hidden="true"></div><h3>Netjies</h3><p>Skerp kante, gevee paadjies, en geen hope vullis agtergelaat nie. Ons ry alles weg.</p></div>
+      <div class="why"><div class="disc disc--sun" aria-hidden="true"></div><h3>Betroubaar</h3><p>Dieselfde span op 'n vaste dag. Jy hoef nie te bel om ons te herinner nie.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- UNHIDE WHEN: the client supplies a real before/after photo pair of their own job (same angle),
+     saved as /images/tuis-voor.webp and /images/tuis-na.webp (1200x900). Never use AI images here. -->
+<section class="section section--paper" aria-labelledby="voor-na-titel" hidden>
+  <div class="container section__inner">
+    <div class="section-head">
+      <p class="eyebrow">Voor · Na</p>
+      <h2 id="voor-na-titel">Kyk self die verskil.</h2>
+    </div>
+    <div class="grid grid--halves">
+      <figure class="compare">
+        <img class="compare__img" src="/images/tuis-voor.webp" width="1200" height="900" loading="lazy" alt="Voor: oorgroeide agterplaas met lang gras en onkruid in die beddings">
+        <figcaption class="eyebrow">Voor</figcaption>
+      </figure>
+      <figure class="compare">
+        <img class="compare__img" src="/images/tuis-na.webp" width="1200" height="900" loading="lazy" alt="Na: dieselfde agterplaas met kort gesnyde gras, skoon beddings en 'n skerp kant langs die paadjie">
+        <figcaption class="eyebrow">Na</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- UNHIDE WHEN: the client supplies 3 real reviews (name + area) and has permission to publish them. -->
+<section class="section" aria-labelledby="resensies-titel" hidden>
+  <div class="container section__inner">
+    <div class="section-head">
+      <p class="eyebrow">Wat kliënte sê</p>
+      <h2 id="resensies-titel">Bure beveel ons aan.</h2>
+    </div>
+    <div class="grid grid--thirds">
+      <figure class="quote"><blockquote>“[Resensie van 'n woonhuis-kliënt, 1–2 sinne]”</blockquote><figcaption>[Naam] · Brandwacht</figcaption></figure>
+      <figure class="quote"><blockquote>“[Resensie van 'n plaas-kliënt, 1–2 sinne]”</blockquote><figcaption>[Naam] · [Plaas], De Wet</figcaption></figure>
+      <figure class="quote"><blockquote>“[Resensie van 'n woonhuis-kliënt, 1–2 sinne]”</blockquote><figcaption>[Naam] · Worcester-Wes</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="cta-wrap" aria-labelledby="cta-titel">
+  <div class="container">
+    <div class="cta-band">
+      <div class="disc disc--ochre cta-band__disc" aria-hidden="true"></div>
+      <div class="cta-band__text">
+        <h2 id="cta-titel">Stuur 'n foto, kry 'n kwotasie.</h2>
+        <p class="lead">WhatsApp ons 'n foto van die tuin of plaas. Ons antwoord binne [24] uur met 'n prys.</p>
       </div>
-      <nav class="mobile-nav" id="mobileNav">
-        <a href="#tuis">Tuis</a>
-        <a href="#dienste">Dienste</a>
-        <a href="#waarom">Waarom Ons</a>
-        <a href="#werk">Ons Werk</a>
-        <a href="#kontak">Kontak</a>
-      </nav>
-    </header>
-
-    <section class="hero" id="tuis">
-      <div class="container hero-inner">
-        <div>
-          <span class="hero-eyebrow"
-            ><span class="dot"></span> Worcester &amp; omgewing</span
-          >
-          <h1>Netjiese tuine, <span class="accent">elke</span> keer weer.</h1>
-          <p class="lead">
-            Als-in-1 Tuindienste sorg vir grasperke, kante en beddings met
-            flinke, betroubare diens — sodat jou tuin altyd op sy beste lyk.
-          </p>
-          <div class="hero-ctas">
-            <a href="#kontak" class="btn btn-primary"
-              >📩 Kry 'n Gratis Kwotasie</a
-            >
-            <a href="#dienste" class="btn btn-secondary">Bekyk Dienste</a>
-          </div>
-          <div class="hero-stats">
-            <div>
-              <span class="num">Vinnig</span
-              ><span class="label">Reageer binne 24 uur</span>
-            </div>
-            <div>
-              <span class="num">Flink</span
-              ><span class="label">Op tyd, elke keer</span>
-            </div>
-            <div>
-              <span class="num">Netjies</span
-              ><span class="label">Skoon, deeglike werk</span>
-            </div>
-          </div>
-        </div>
-        <div class="hero-art">
-          <svg viewBox="0 0 200 200" fill="#fff">
-            <circle cx="100" cy="60" r="50" />
-            <rect x="92" y="60" width="16" height="120" rx="6" />
-          </svg>
-          <span class="badge">FLINK • NETJIES • BETROUBAAR</span>
-        </div>
+      <div class="cluster cta-band__actions">
+        <a class="btn btn--whatsapp" href="https://wa.me/27000000000?text=Hallo%2C%20ek%20wil%20graag%20%27n%20kwotasie%20kry."><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.4L3 21l2.1-5.6A8.4 8.4 0 1 1 21 11.5z"/></svg>WhatsApp ons</a>
+        <a class="btn btn--on-dark" href="/kontak/">Vul die vorm in</a>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <section class="services" id="dienste">
-      <div class="container">
-        <div class="section-head">
-          <span class="kicker">Ons Dienste</span>
-          <h2>Alles vir jou tuin, op een plek</h2>
-          <div class="dots">• • • • • • • • • •</div>
-          <p>
-            Van weeklikse grassny tot volledige beddingversorging — ons hanteer
-            dit alles met sorg en presisie.
-          </p>
-        </div>
-        <div class="service-grid">
-          <div class="service-card">
-            <div class="icon">🌿</div>
-            <h3>Grasperke</h3>
-            <p>
-              Gereelde, netjiese snitte wat jou grasperk die hele jaar deur fris
-              en gesond hou.
-            </p>
-          </div>
-          <div class="service-card">
-            <div class="icon">✂️</div>
-            <h3>Kante &amp; Snoeiwerk</h3>
-            <p>
-              Skoon, reguit kante en netjies gesnoeide heinings vir 'n
-              afgewerkte voorkoms.
-            </p>
-          </div>
-          <div class="service-card">
-            <div class="icon">🌸</div>
-            <h3>Blombeddings</h3>
-            <p>
-              Beddings wat met sorg versorg word — onkruidvry, gevoed en mooi
-              aangelê.
-            </p>
-          </div>
-          <div class="service-card">
-            <div class="icon">💧</div>
-            <h3>Besproeiing</h3>
-            <p>
-              Opstel en instandhouding van besproeiingstelsels wat water en tyd
-              bespaar.
-            </p>
-          </div>
-          <div class="service-card">
-            <div class="icon">🍂</div>
-            <h3>Seisoenale Opruiming</h3>
-            <p>
-              Herfsblare, lente-skoonmaak en alles tussenin — ons hanteer dit
-              netjies.
-            </p>
-          </div>
-          <div class="service-card">
-            <div class="icon">🌳</div>
-            <h3>Tuinontwerp</h3>
-            <p>
-              Persoonlike voorstelle om jou buitelewe ruimte mooier en
-              funksioneler te maak.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+</main>
 
-    <section class="why" id="waarom">
-      <div class="container">
-        <div class="why-grid">
-          <div class="why-copy">
-            <span class="kicker">Waarom Als-in-1</span>
-            <h2>Diens waarop jy kan staatmaak</h2>
-            <p>
-              Ons bou ons naam op konstantheid — nie net mooi werk nie, maar
-              werk wat jy elke keer kan vertrou. Geen weggeskuifde afsprake,
-              geen verskuilde kostes nie.
-            </p>
-            <div class="reasons">
-              <div class="reason-card">
-                <span class="icon">✅</span>
-                <h4>Betroubaar</h4>
-                <p>Ons kom op tyd op en lewer presies wat belowe is.</p>
-              </div>
-              <div class="reason-card">
-                <span class="icon">💬</span>
-                <h4>Vinnige Kommunikasie</h4>
-                <p>
-                  Elke boodskap kry 'n vinnige antwoord — geen onsekerheid nie.
-                </p>
-              </div>
-              <div class="reason-card">
-                <span class="icon">💰</span>
-                <h4>Bekostigbaar</h4>
-                <p>Eerlike pryse, sonder verskuilde fooie of verrassings.</p>
-              </div>
-              <div class="reason-card">
-                <span class="icon">👷</span>
-                <h4>Ervare Span</h4>
-                <p>Geskoolde, sorgsame hande agter elke werk wat ons doen.</p>
-              </div>
-            </div>
-          </div>
-          <div class="why-visual">
-            🌳🌿🌳<br />Worcester se vertroude tuinspan, van grasperk tot
-            bedding.
-          </div>
-        </div>
-      </div>
-    </section>
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div class="site-footer__brand">
+      <img src="/assets/logo/als-in-1-logo-280.webp" srcset="/assets/logo/als-in-1-logo-280.webp 280w, /assets/logo/als-in-1-logo-420.webp 420w" sizes="140px" width="140" height="121" alt="Als-in-1 Tuindienste" loading="lazy">
+      <p>Gras, beddings, rante en gifbeheer. Tuinvullis altyd ingesluit.</p>
+    </div>
+    <div class="site-footer__col">
+      <p class="eyebrow">Woonhuise</p>
+      <ul>
+        <li>Worcester-Sentraal</li>
+        <li>Brandwacht</li>
+        <li>Worcester-Wes</li>
+      </ul>
+    </div>
+    <div class="site-footer__col">
+      <p class="eyebrow">Plase</p>
+      <ul>
+        <li>De Wet</li>
+        <li>Nonna</li>
+        <li>Aan de Doorns</li>
+        <li>Overhex</li>
+      </ul>
+    </div>
+    <div class="site-footer__col site-footer__col--links">
+      <p class="eyebrow">Kontak</p>
+      <ul>
+        <li><a href="https://wa.me/27000000000?text=Hallo%2C%20ek%20wil%20graag%20%27n%20kwotasie%20kry.">WhatsApp: [NOMMER]</a></li>
+        <li><a href="tel:+27000000000">Selfoon: [NOMMER]</a></li>
+        <li>E-pos: [E-POS]</li>
+        <li>Ma–Vr [07:00–17:00]</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container">
+    <div class="site-footer__bottom">
+      <span>© 2026 Als-in-1 Tuindienste</span>
+      <span class="site-footer__legal"><a href="/privaatheid/">Privaatheid</a><span>Webwerf deur AutoWeb Solutions</span></span>
+    </div>
+  </div>
+</footer>
 
-    <section class="gallery" id="werk">
-      <div class="container">
-        <div class="section-head">
-          <span class="kicker">Onlangse Werk</span>
-          <h2>Tuine wat ons trots maak</h2>
-          <div class="dots">• • • • • • • • • •</div>
-          <p>'n Greep van ons onlangse projekte in en om Worcester.</p>
-        </div>
-        <div class="gallery-grid">
-          <div class="gallery-item"><span>Grasperk</span></div>
-          <div class="gallery-item"><span>Beddings</span></div>
-          <div class="gallery-item"><span>Kante</span></div>
-          <div class="gallery-item"><span>Heinings</span></div>
-          <div class="gallery-item"><span>Tuinontwerp</span></div>
-          <div class="gallery-item"><span>Opruiming</span></div>
-          <div class="gallery-item"><span>Besproeiing</span></div>
-          <div class="gallery-item"><span>Grasperk</span></div>
-        </div>
-      </div>
-    </section>
+<nav class="mobile-bar" aria-label="Vinnige kontak">
+  <a class="btn btn--whatsapp" href="https://wa.me/27000000000?text=Hallo%2C%20ek%20wil%20graag%20%27n%20kwotasie%20kry."><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.4L3 21l2.1-5.6A8.4 8.4 0 1 1 21 11.5z"/></svg>WhatsApp</a>
+  <a class="btn btn--primary" href="tel:+27000000000"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Bel</a>
+</nav>
 
-    <section class="testimonial">
-      <div class="container">
-        <blockquote>
-          "Ons tuin het nog nooit so netjies gelyk nie. Als-in-1 kom altyd op
-          tyd op en die werk is deurgaans uitstekend."
-        </blockquote>
-        <cite>— Tevrede kliënt, Worcester</cite>
-      </div>
-    </section>
-
-    <section class="contact" id="kontak">
-      <div class="container contact-inner">
-        <h2>Kry vandag nog 'n gratis kwotasie</h2>
-        <p>
-          Stuur vir ons 'n boodskap en ons kom terug na jou met 'n vinnige,
-          eerlike kwotasie vir jou tuin.
-        </p>
-        <form class="contact-form" id="quoteForm">
-          <div>
-            <label for="naam">Naam</label>
-            <input
-              type="text"
-              id="naam"
-              name="naam"
-              placeholder="Jou volle naam"
-              required
-            />
-          </div>
-          <div>
-            <label for="kontaknommer">Kontaknommer</label>
-            <input
-              type="tel"
-              id="kontaknommer"
-              name="kontaknommer"
-              placeholder="082 123 4567"
-              required
-            />
-          </div>
-          <div>
-            <label for="boodskap">Vertel ons van jou tuin</label>
-            <textarea
-              id="boodskap"
-              name="boodskap"
-              placeholder="Bv. grootte van grasperk, watter dienste benodig word..."
-            ></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Stuur Aanvraag</button>
-          <div class="form-msg" id="formMsg"></div>
-        </form>
-        <div class="contact-direct">
-          <a href="tel:+27000000000">📞 Bel ons: 000 000 0000</a>
-          <a href="https://wa.me/27000000000" target="_blank"
-            >💬 WhatsApp ons direk</a
-          >
-          <span>📍 Worcester, Wes-Kaap</span>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <div class="container">
-        <div class="footer-logo">Als-in-1 Tuindienste</div>
-        <div class="tagline">Flink • Netjies • Betroubaar</div>
-        <p>
-          &copy; 2026 Als-in-1 Tuindienste. Alle regte voorbehou. Worcester,
-          Wes-Kaap.
-        </p>
-      </div>
-    </footer>
-
-    <a
-      href="https://wa.me/27000000000"
-      class="wa-float"
-      target="_blank"
-      aria-label="WhatsApp ons"
-      >💬</a
-    >
-
-    <script>
-      const menuBtn = document.getElementById("menuBtn");
-      const mobileNav = document.getElementById("mobileNav");
-      menuBtn.addEventListener("click", () => {
-        mobileNav.classList.toggle("open");
-      });
-      mobileNav.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", () =>
-          mobileNav.classList.remove("open"),
-        );
-      });
-
-      const form = document.getElementById("quoteForm");
-      const msg = document.getElementById("formMsg");
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
-        msg.textContent =
-          "Dankie! Ons het jou aanvraag ontvang en kontak jou binnekort.";
-        form.reset();
-      });
-    </script>
-  </body>
+</body>
 </html>

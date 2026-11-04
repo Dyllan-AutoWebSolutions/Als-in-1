@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&family=Nunito+Sans:wght@400;700&display=swap");
+/* Als-in-1 Tuindienste — component classes (prefix ai1-). Values come only from tokens.css. */
+body { margin: 0; background: var(--surface-cream); color: var(--ink); font-family: var(--font-body); }
+.ai1-row { display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: center; padding: var(--space-4); }
+
+/* Button */
+.ai1-btn { display: inline-flex; align-items: center; gap: var(--space-2); font-family: var(--font-display); font-weight: 600; font-size: 15px; line-height: 20px; letter-spacing: .08em; text-transform: uppercase; padding: var(--space-3) var(--space-6); border-radius: var(--radius-full); border: 2px solid transparent; cursor: pointer; text-decoration: none; transition: background-color .15s, box-shadow .15s; }
+.ai1-btn:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+.ai1-btn--primary { background: var(--bark); color: var(--on-bark); }
+.ai1-btn--primary:hover { background: var(--bark-deep); }
+.ai1-btn--whatsapp { background: var(--leaf-deep); color: #ffffff; }
+.ai1-btn--whatsapp:hover { box-shadow: var(--shadow-raised); }
+.ai1-btn--outline { background: transparent; color: var(--bark); border-color: var(--bark); }
+.ai1-btn--outline:hover { background: var(--bark); color: var(--on-bark); }
+.ai1-btn svg { width: 18px; height: 18px; }
+
+/* Chip */
+.ai1-chip { display: inline-flex; align-items: center; gap: var(--space-2); font-family: var(--font-body); font-weight: 700; font-size: 14px; line-height: 20px; padding: 6px 14px; border-radius: var(--radius-full); color: var(--on-accent); }
+.ai1-chip::before { content: ""; width: 10px; height: 10px; border-radius: var(--radius-full); background: var(--ink); opacity: .55; }
+.ai1-chip--ochre { background: var(--ochre); }
+.ai1-chip--sun { background: var(--sun); }
+.ai1-chip--leaf { background: var(--leaf-soft); }
+.ai1-chip--plain { background: var(--surface-paper); border: 1px solid var(--line); }
+
+/* Eyebrow */
+.ai1-eyebrow { font-family: var(--font-display); font-weight: 600; font-size: 13px; line-height: 16px; letter-spacing: .24em; text-transform: uppercase; color: var(--bark); margin: 0 0 var(--space-2); }
+
+/* Service card */
+.ai1-card { background: var(--surface-paper); border-radius: var(--radius-md); box-shadow: var(--shadow-card); overflow: hidden; display: flex; flex-direction: column; max-width: 340px; transition: box-shadow .15s; }
+.ai1-card:hover { box-shadow: var(--shadow-raised); }
+.ai1-card__media { aspect-ratio: 4 / 3; background: var(--surface-sand); position: relative; overflow: hidden; }
+.ai1-card__body { padding: var(--space-6); display: flex; flex-direction: column; gap: var(--space-3); }
+.ai1-card__title { font-family: var(--font-display); font-weight: 600; font-size: 22px; line-height: 28px; margin: 0; color: var(--ink); }
+.ai1-card__text { font-size: 16px; line-height: 26px; margin: 0; color: var(--ink-muted); }
+.ai1-card__list { margin: 0; padding: 0; list-style: none; display: grid; gap: var(--space-1); font-size: 15px; }
+.ai1-card__list li::before { content: "✓"; color: var(--leaf-deep); font-weight: 700; margin-right: var(--space-2); }
+
+/* Social post (scaled 4:5 artboard) */
+.ai1-post { width: 270px; aspect-ratio: 4 / 5; border-radius: var(--radius-md); position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end; padding: var(--space-6); box-sizing: border-box; box-shadow: var(--shadow-card); }
+.ai1-post--service { background: var(--surface-cream); color: var(--ink); border: 1px solid var(--line); }
+.ai1-post--quote { background: var(--surface-bark); color: var(--on-bark); }
+.ai1-post__disc { position: absolute; border-radius: var(--radius-full); }
+.ai1-post__title { font-family: var(--font-display); font-weight: 600; font-size: 30px; line-height: 34px; margin: 0 0 var(--space-2); position: relative; }
+.ai1-post__text { font-size: 14px; line-height: 20px; margin: 0 0 var(--space-4); position: relative; }
+.ai1-post__foot { font-size: 12px; line-height: 16px; font-weight: 700; position: relative; display: flex; justify-content: space-between; border-top: 1px solid currentColor; padding-top: var(--space-2); opacity: .9; }
+.ai1-post .ai1-eyebrow { position: relative; }
+.ai1-post--quote .ai1-eyebrow { color: var(--sun); }
