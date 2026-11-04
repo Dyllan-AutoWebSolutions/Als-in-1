@@ -7,7 +7,7 @@
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url("/fonts/josefin-sans-600-latin.woff2") format("woff2");
+  src: url("../fonts/josefin-sans-600-latin.woff2") format("woff2");
 }
 
 /* Nunito Sans ships as a variable font; this one file covers 400 and 700. */
@@ -16,7 +16,7 @@
   font-style: normal;
   font-weight: 400 700;
   font-display: swap;
-  src: url("/fonts/nunito-sans-latin.woff2") format("woff2");
+  src: url("../fonts/nunito-sans-latin.woff2") format("woff2");
 }
 
 :root {
